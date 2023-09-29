@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="add_a_course.css">
+  <title>Coaching Center</title>
+</head>
+
+<body>
+  <header>
+    <h1>Coaching Center</h1>
+  </header>
+  <main>
+    <section class="course-form">
+      <h2>Add a New Course</h2>
+      <form>
+        <div class="input-group">
+          <label for="coachingName">Coaching Name:</label>
+          <input type="text" id="coachingName" name="coachingName" required>
+        </div>
+
+        <div class="input-group">
+          <label for="courseName">Course Name:</label>
+          <input type="text" id="courseName" name="courseName" required>
+        </div>
+
+        <div class="input-group">
+          <label for="coursePrice">Course Price:</label>
+          <input type="number" id="coursePrice" name="coursePrice" min="0" required>
+        </div>
+
+        <div class="input-group">
+          <label for="courseDuration">Course Duration (weeks):</label>
+          <input type="number" id="courseDuration" name="courseDuration" min="1" required>
+        </div>
+
+        <div class="input-group">
+          <label for="courseStream">Select Stream:</label>
+          <select id="courseStream" name="courseStream">
+            <option value="jee">JEE</option>
+            <option value="neet">NEET</option>
+          </select>
+        </div>
+
+        <!-- <div class="input-group">
+                    <label for="courseRating">Course Rating:</label>
+                    <div class="rating">
+                        <input type="radio" name="courseRating" id="star5" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" name="courseRating" id="star4" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" name="courseRating" id="star3" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" name="courseRating" id="star2" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" name="courseRating" id="star1" value="1">
+                        <label for="star1"></label>
+                    </div>
+                </div> -->
+
+        <div class="input-group center">
+          <button type="submit">Add Course</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Registration</title>
+    <link rel="stylesheet" href="cregistration.css"> 
+</head>
+<body>
+    <div class="container">
+    <div class="registration-form">
+        <h2>Coaching Registration</h2>
+        <form action="cregistration.php" method="post"> 
+            <div class="form-group">
+                <label for="coachingName">Coaching Name:</label>
+                <input type="text" id="coaching_Name" name="coaching_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="coachingWebsite">Registration Number:</label>
+                <input type="text" id="coachingWebsite" name="registrationnumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contact_Number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="confirm_password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

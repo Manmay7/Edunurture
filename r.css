@@ -1,0 +1,65 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the whole page */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the container vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style the form */
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px; /* Increase padding for more space */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 600px; /* Set a maximum width for the form */
+    width: 100%; /* Make sure it takes up the available width */
+  }
+/* Style radio buttons and labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
