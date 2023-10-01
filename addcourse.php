@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // echo $sql;
 
     if (mysqli_query($conn, $sql)) {
-        echo "Mentor Added Succesfully";
+        echo "Course Added Succesfully";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
