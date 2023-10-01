@@ -31,7 +31,7 @@ if ( !isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
           <li><a href="cwelcome.php" class="hover-link">Home</a></li>
           <li><a href="aboutc.php" class="hover-link">About us</a></li>
           <li><a href="coursesc.php" class="hover-link">Courses</a></li>
-          <li><a href="#" class="hover-link">Coaching</a></li>
+          <li><a href="coachic.php" class="hover-link">Coaching</a></li>
           <!-- <li><a href="login.html" class="hover-link secondary-button">Sign in</a></li>-->
           <li class="">
           <li><a href="cprofile.php"> <img src="user_456212.png" width="40px" height="40px"></li>

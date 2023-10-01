@@ -56,7 +56,7 @@ if ( !isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
                 <hr align="center">
             </div>
             <div class="url">
-                <a href="csetting.html">Settings</a>
+                <a href="csetting.php">Settings</a>
                 <hr align="center">
             </div>
         </div>
@@ -68,7 +68,7 @@ if ( !isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
         <h2>IDENTITY</h2>
         <div class="card">
             <div class="card-body">
-                <i class="fa fa-pen fa-xs edit"></i>
+                <a href="csetting.php"><i class="fa fa-pen fa-xs edit"></i></a>
                 <table>
                     <tbody>
                         <tr>
@@ -100,7 +100,7 @@ if ( !isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
                 </table>
                 <div class="sidenav-url">
                     <div class="url">
-                        <a href="#profile" class="active">Home</a>
+                        <a href="cwelcome.php" class="active">Home</a>
                         <!-- <hr align="right" style="margin-top:"> -->
                     </div>
                 </div>
