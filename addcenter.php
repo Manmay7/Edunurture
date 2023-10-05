@@ -40,51 +40,76 @@ mysqli_close($conn);
 </head>
 <style>
     body {
-            font-family: Arial, sans-serif;
-        }
+        font-family: Arial, sans-serif;
+    }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
-        h2 {
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .url, hr {
+    text-align: center;
+}
 
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+.url hr {
+    margin-left: 20%;
+    width: 60%;
+}
 
-        input {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
+.url a {
+    color: #818181;
+    display: block;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 6px 8px;
+    text-decoration: none;
+}
 
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+.url a:hover, .url .active {
+    background-color: #e8f5ff;
+    border-radius: 28px;
+    color: #000;
+    margin-left: 14%;
+    width: 65%;
+}
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 <body>
 
     <div class="container">
@@ -99,7 +124,10 @@ mysqli_close($conn);
 
 
             <button type="submit">Add</button>
-
+            <div class="url">
+            <a href="csetting.php" class="active">Back</a>
+            <!-- <hr align="right" style="margin-top:"> -->
+          </div>
         </form>
     </div>
 </body>

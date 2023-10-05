@@ -93,6 +93,10 @@ mysqli_close($conn);
             
             
             <button type="submit">Submit</button>
+            <div class="url">
+            <a href="csetting.php" class="active">Back</a>
+            <!-- <hr align="right" style="margin-top:"> -->
+          </div>
         </form>
     </div>
 </body>

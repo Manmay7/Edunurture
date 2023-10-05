@@ -140,6 +140,10 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
             <a href="addcenter.php" class="active">Add Center</a>
             <!-- <hr align="right" style="margin-top:"> -->
           </div>
+          <div class="url">
+            <a href="addresult.php" class="active">Add Result</a>
+            <!-- <hr align="right" style="margin-top:"> -->
+          </div>
         </div>
       </div>
     </div>

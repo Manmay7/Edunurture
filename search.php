@@ -27,7 +27,7 @@
         $search_query = $_POST['search_query'];
 
         // SQL query to search the "coaching" table
-        $sql = "SELECT * FROM coaching WHERE coaching_Name LIKE '%$search_query%'";
+        $sql = "SELECT * FROM coaching WHERE coaching_Name LIKE '$search_query%'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

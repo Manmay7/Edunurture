@@ -116,6 +116,10 @@ body {
             <button type="submit">Add</button>
 
         </form>
+        <div class="url">
+            <a href="csetting.php" class="active">Back</a>
+            <!-- <hr align="right" style="margin-top:"> -->
+          </div>
     </div>
 </body>
 
