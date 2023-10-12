@@ -112,9 +112,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
                 </div>
             </div>
         </div>
-
-
-
     </div>
     <!-- End -->
 </body>
