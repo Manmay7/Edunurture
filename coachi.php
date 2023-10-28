@@ -104,117 +104,294 @@
       <label for="slide4"></label>
     </div>
   </div>
-  
 
-  
-  <div class="contain">
-  
-    <div class="container">
-      <div class="card">
-        <img src="Allen.jpg" alt="Allen" style="width:100%">
-        <h1><?php ?></h1>
-        
-        <p class="title"> <?php
-  $sql = "SELECT * FROM coaching where id=1";
-  $result = mysqli_query($conn, $sql);
-  $row = mysqli_fetch_assoc($result);
-  echo   $row['coaching_Name'] ;?> Career Institute is one of the most trusted institutes in Indore.This institute provides
-          courses like
-          NEET, IIT JEE, AIPMT, AIEEE, Olympiad, NTSE, and KVPY.</p>
-        <!-- <p>Harvard University</p>  -->
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button>Visit <span>&rarr;</span></button></p>
-      </div>
 
-      <div class="card">
-        <img src="Catalyser.jpeg" alt="Catalyser" style="width:100%">
-        <h1>Catalyser</h1>
-        <p class="title">
-          Recognized as one of the best IIT JEE coaching centers in Indore, CatalyseR has consistently produced
-          top-performing students who have excelled in competitive exams. Over the past 13 years, they have produced
-          10 JEE City Toppers, 5 IIT Zone Toppers, the highest number of AIR under 1000 (Freshers) in 2022, and more
-          than 1400 NTSE Scholars, 1800 plus IIT Selections which is an impressive feat unmatched by any other
-        </p>
-        <!-- <p>Harvard University</p>  -->
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button>Visit <span>&rarr;</span></button></p>
-      </div>
 
-      <div class="card">
-        <img src="Aayam1.jpg" alt="Aayam" style="width:100%">
-        <h1>Aayam</h1>
-        <p class="title"> AAYAM is a premier coaching institute in Indore, India, renowned for its exceptional guidance
-          and coaching
-          for JEE (Main+Advanced), JEE (Main), NEET-UG, and Pre-Nurture & Career Foundation exams. Our institute is
-          highly regarded for its consistent delivery of outstanding results year after year.
-        </p>
-        <!-- <p>Harvard University</p>  -->
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button>Visit <span>&rarr;</span></button></p>
-      </div>
-    </div>
+  <div class="container">
 
     <div class="container1">
       <div class="card">
-        <img src="kalpvriksha.png" alt="kalpvriksha" style="width:100%">
-        <h1>Kalpvriksha</h1>
-        <p class="title"> Kalpavriksh got the capability of adding the enhancement to every one’s thought process and
-          developing their
-          self growth. Kalpavriksha proudly term itself as the modern Gurukul for IIT-JEE And NEET coaching classes
-          and training classes in Indore
-        </p>
+        <img class="image" src="catalyser.jpg" alt="catalyser" style="width:100%">
 
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a> -->
-        < <a href="#"><i class="fa fa-facebook"></i></a>
-          <p><button>Visit <span>&rarr;</span></button></p>
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
+        </p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=1";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames[] = $row['coursename'];
+          }
+          foreach ($courseNames as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+        <div class="visit">
+        <p >Visit <span>&rarr;</span></p>
+        </div>
       </div>
 
       <div class="card">
-        <img src="Vigyas.jpeg" alt="Vigyas" style="width:100%">
-        <h1>Vigyas</h1>
-        <p class="title"> Qualifying the most prestigious exams IIT JEE (Mains & Advanced) and NEET is the ultimate
-          dream
-          of every
-          student who wants to make career in engineering and medical field.Get complete guidance on IIT JEE (Mains &
-          Advanced), NEET, NTSE and various Olympiads preparation with our highly qualified and dedicated faculty to
-          make your journey to crack IIT JEE, NEET or any other exam easier.
+        <div>
+        <img class="image" src="allen2.jpeg" alt="catalyser" style="width:100%">
+
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=2";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
         </p>
-        <!-- < <p>Harvard University</p>   -->
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button>Visit <span>&rarr;</span></button></p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=2";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=2";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=2";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=2";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames2[] = $row['coursename'];
+          }
+          foreach ($courseNames2 as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+      </div>
+        <div class="visit">
+          <p >Visit <span>&rarr;</span></p>
+        </div>
       </div>
 
+
       <div class="card">
-        <img src="fiitjee.jpg" alt="FIIT-JEE" style="width:100%">
-        <h1>FIIT-JEE</h1>
-        <p class="title">You will inherit the pedigree of 26 years of unmatched, consistent dominance in results in all
-          engineering
-          entrance exams including IIT-JEE / JEE Advanced, AIEEE / JEE Main, BITSAT, WBJEE, TANCET, EAMCET, KCET,
-          MHTCET….
+        <img src="kal.jpg" alt="catalyser" style="width:100%">
+
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=3";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
         </p>
-        <!-- <p>Harvard University</p>  -->
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <p><button>Visit <span>&rarr;</span></button></p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=3";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=3";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=3";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=3";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames1[] = $row['coursename'];
+          }
+          foreach ($courseNames1 as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+        <p class="visit">Visit <span>&rarr;</span></p>
       </div>
+
     </div>
-  </div>
+
+    <div class="container2">
+      <div class="card">
+        <img class="image" src="aayam.jpeg" alt="catalyser" style="width:100%">
+
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
+        </p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=1";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames3[] = $row['coursename'];
+          }
+          foreach ($courseNames3 as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+        <p class="visit">Visit <span>&rarr;</span></p>
+      </div>
+
+      <div class="card">
+        <img class="image" src="aakask.jpeg" alt="catalyser" style="width:100%">
+
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
+        </p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=1";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames4[] = $row['coursename'];
+          }
+          foreach ($courseNames4 as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+        <p class="visit">Visit <span>&rarr;</span></p>
+      </div>
+
+
+      <div class="card">
+        <img class="image" src="successpoint.jpeg" alt="catalyser" style="width:100%">
+
+        <p class="title">
+          <?php
+          $sql = "SELECT * FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['coaching_Name']; ?>
+        </p>
+        <p class="contactnumber">Contact Number :
+          <?php
+          $sql = "SELECT contact_Number FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['contact_Number']; ?>
+        </p>
+        <p class="email">Email :
+          <?php
+          $sql = "SELECT email FROM coaching where id=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['email']; ?>
+        </p>
+        <p class="rating">Rating :
+          <?php
+          $sql = "SELECT rating FROM ratings where cid=1";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          echo $row['rating']; ?>
+        </p>
+        <p class="courses">Courses :
+          <?php
+          $sql = "SELECT coursename FROM courses where coachingid=1";
+          $result = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($result)) {
+            $courseNames5[] = $row['coursename'];
+          }
+          foreach ($courseNames5 as $courseName) {
+            echo $courseName . "<br>";
+          } ?>
+        </p>
+        <p class="visit">Visit <span>&rarr;</span></p>
+      </div>
+
+    </div>
 
 
 </body>

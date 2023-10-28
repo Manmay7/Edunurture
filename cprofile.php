@@ -128,6 +128,76 @@ require_once "config.php";
         </div>
     </div>
     <div class="main">
+        <h2>Courses Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <a href="csetting.php"><i class="fa fa-pen fa-xs edit"></i></a>
+                <?php
+                $sql = "SELECT * FROM courses where coachingid=$_SESSION[id]";
+                $result = mysqli_query($conn, $sql);
+                ?>
+                <table>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Field</th>
+                        <th>Duration(in month)</th>
+                        <th>Fees</th>
+                    </tr>
+                    <?php
+                    // Display mentor data in a table
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>",  $row['coursename'] . "</td>";
+                        echo "<td>",  $row['field'] . "</td>";
+                        echo "<td>",  $row['duration'] . "</td>";
+                        echo "<td>",  $row['fees'] . "</td>";
+                        // Add more table data cells for other columns as needed
+                        echo "</tr>";
+                    }
+                    ?>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="main">
+        <h2>Center</h2>
+        <div class="card">
+            <div class="card-body">
+                <a href="csetting.php"><i class="fa fa-pen fa-xs edit"></i></a>
+                <?php
+                $sql = "SELECT * FROM center where coachingid=$_SESSION[id]";
+                $result = mysqli_query($conn, $sql);
+                ?>
+                <table>
+                    <tr>
+                        <th>Center Name</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                    </tr>
+                    <?php
+                    // Display mentor data in a table
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>",  $row['centername'] . "</td>";
+                        echo "<td>",  $row['address'] . "</td>";
+                        echo "<td>",  $row['city'] . "</td>";
+                        echo "<td>",  $row['state'] . "</td>";
+                        // Add more table data cells for other columns as needed
+                        echo "</tr>";
+                    }
+                    ?>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="main">
         <h2>Mentor</h2>
         <div class="card">
             <div class="card-body">
@@ -160,29 +230,30 @@ require_once "config.php";
 
 
     </div>
+    
     <div class="main">
-        <h2>Center</h2>
+        <h2>Best Results</h2>
         <div class="card">
             <div class="card-body">
                 <a href="csetting.php"><i class="fa fa-pen fa-xs edit"></i></a>
                 <?php
-                $sql = "SELECT * FROM centers where cid=$_SESSION[id]";
+                $sql = "SELECT * FROM results where cid=$_SESSION[id]";
                 $result = mysqli_query($conn, $sql);
                 ?>
                 <table>
                     <tr>
-                        <th>Name</th>
-                        <th>Contact Number</th>
-                        <th>Education</th>
+                        <th>Student Name</th>
+                        <th>Rank</th>
+                        <th>Batch</th>
                     </tr>
                     <?php
-                    // Display mentor data in a table
+                    
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>",  $row['username'] . "</td>";
-                        echo "<td>",  $row['contact_Number'] . "</td>";
-                        echo "<td>",  $row['education'] . "</td>";
-                        // Add more table data cells for other columns as needed
+                        echo "<td>",  $row['studentname'] . "</td>";
+                        echo "<td>",  $row['rank'] . "</td>";
+                        echo "<td>",  $row['batch'] . "</td>";
+                        
                         echo "</tr>";
                     }
                     ?>
@@ -193,6 +264,7 @@ require_once "config.php";
 
 
     </div>
+    
     <!-- End -->
 </body>
 

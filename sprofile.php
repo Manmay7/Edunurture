@@ -57,10 +57,10 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
                 <a href="#profile" class="active">Profile</a>
                 <hr align="center">
             </div>
-            <div class="url">
+            <!-- <div class="url">
                 <a href="#settings">Settings</a>
                 <hr align="center">
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- End -->
@@ -106,7 +106,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != true) {
                 </table>
                 <div class="sidenav-url">
                     <div class="url">
-                        <a href="#profile" class="active">Dashboard</a>
+                        <a href="swelcome.php" class="active">Home</a>
                         <!-- <hr align="right" style="margin-top:"> -->
                     </div>
                 </div>
