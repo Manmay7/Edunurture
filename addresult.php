@@ -103,7 +103,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <label for="rank">Rank:</label>
         <input type="text" name="rank" id="rank" required><br><br>
 
-        <label for="batch">Batch:</label>
+        <label for="batch">College:</label>
         <input type="text" name="batch" id="batch" required><br><br>
 
         <input type="submit" value="Submit">

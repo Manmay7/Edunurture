@@ -11,15 +11,9 @@
 
 <body>
 
-  <!-- top-banner -->
-  <div class="top-banner">
-    <div class="container">
-      <div class="small-bold-text banner-text">📣 Best Coachings for JEE/NEET-></div>
-    </div>
-  </div>
 
   <!-- nav-bar -->
-  <nav id="top_container" class="top_bar">
+  <nav id="top_container" class="top_bar" width="100px">
 
     <div class=" man-nav flex" style="margin-left: 50px; margin-right:73px;">
       <a href="#" class="company-logo">
@@ -30,9 +24,9 @@
       <div class="nav-links">
         <ul class="flex">
           <li><a href="index.html" class="hover-link">Home</a></li>
-          <li class="aboutc"><a href="about.html" class="hover-link">About us</a></li>
+          <li class=""><a href="about.html" class="hover-link">About us</a></li>
           <li><a href="courses.html" class="hover-link">Courses</a></li>
-          <li><a href="coachi.html" class="hover-link">Coaching</a></li>
+          <li><a href="coachi.php" class="hover-link">Coaching</a></li>
           <li><a href="studentr.html" class="hover-link secondary-button">Sign in</a></li>
           <li><a href="r.html" class="hover-link primary-button">Sign up</a></li>
         </ul>
@@ -153,62 +147,62 @@
           } ?>
         </p>
         <div class="visit">
-        <p >Visit <span>&rarr;</span></p>
+          <p class="visit">Visit <span>&rarr;</span></p>
         </div>
       </div>
 
       <div class="card">
         <div>
-        <img class="image" src="allen2.jpeg" alt="catalyser" style="width:100%">
+          <img class="image" src="allen2.jpeg" alt="catalyser" style="width:100%">
 
-        <p class="title">
-          <?php
-          $sql = "SELECT * FROM coaching where id=2";
-          $result = mysqli_query($conn, $sql);
-          $row = mysqli_fetch_assoc($result);
-          echo $row['coaching_Name']; ?>
-        </p>
-        <p class="contactnumber">Contact Number :
-          <?php
-          $sql = "SELECT contact_Number FROM coaching where id=2";
-          $result = mysqli_query($conn, $sql);
-          $row = mysqli_fetch_assoc($result);
-          echo $row['contact_Number']; ?>
-        </p>
-        <p class="email">Email :
-          <?php
-          $sql = "SELECT email FROM coaching where id=2";
-          $result = mysqli_query($conn, $sql);
-          $row = mysqli_fetch_assoc($result);
-          echo $row['email']; ?>
-        </p>
-        <p class="rating">Rating :
-          <?php
-          $sql = "SELECT rating FROM ratings where cid=2";
-          $result = mysqli_query($conn, $sql);
-          $row = mysqli_fetch_assoc($result);
-          echo $row['rating']; ?>
-        </p>
-        <p class="courses">Courses :
-          <?php
-          $sql = "SELECT coursename FROM courses where coachingid=2";
-          $result = mysqli_query($conn, $sql);
-          while ($row = mysqli_fetch_assoc($result)) {
-            $courseNames2[] = $row['coursename'];
-          }
-          foreach ($courseNames2 as $courseName) {
-            echo $courseName . "<br>";
-          } ?>
-        </p>
-      </div>
+          <p class="title">
+            <?php
+            $sql = "SELECT * FROM coaching where id=2";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo $row['coaching_Name']; ?>
+          </p>
+          <p class="contactnumber">Contact Number :
+            <?php
+            $sql = "SELECT contact_Number FROM coaching where id=2";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo $row['contact_Number']; ?>
+          </p>
+          <p class="email">Email :
+            <?php
+            $sql = "SELECT email FROM coaching where id=2";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo $row['email']; ?>
+          </p>
+          <p class="rating">Rating :
+            <?php
+            $sql = "SELECT rating FROM ratings where cid=2";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo $row['rating']; ?>
+          </p>
+          <p class="courses">Courses :
+            <?php
+            $sql = "SELECT coursename FROM courses where coachingid=2";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+              $courseNames2[] = $row['coursename'];
+            }
+            foreach ($courseNames2 as $courseName) {
+              echo $courseName . "<br>";
+            } ?>
+          </p>
+        </div>
         <div class="visit">
-          <p >Visit <span>&rarr;</span></p>
+          <p class="visit">Visit <span>&rarr;</span></p>
         </div>
       </div>
 
 
       <div class="card">
-        <img src="kal.jpg" alt="catalyser" style="width:100%">
+        <img class="image" src="kal.jpg" alt="catalyser" style="width:100%">
 
         <p class="title">
           <?php
@@ -260,35 +254,35 @@
 
         <p class="title">
           <?php
-          $sql = "SELECT * FROM coaching where id=1";
+          $sql = "SELECT * FROM coaching where coaching_Name='Aayam Carrer Institute'";
           $result = mysqli_query($conn, $sql);
           $row = mysqli_fetch_assoc($result);
           echo $row['coaching_Name']; ?>
         </p>
         <p class="contactnumber">Contact Number :
           <?php
-          $sql = "SELECT contact_Number FROM coaching where id=1";
+          $sql = "SELECT contact_Number FROM coaching where coaching_Name='Aayam Carrer Institute'";
           $result = mysqli_query($conn, $sql);
           $row = mysqli_fetch_assoc($result);
           echo $row['contact_Number']; ?>
         </p>
         <p class="email">Email :
           <?php
-          $sql = "SELECT email FROM coaching where id=1";
+          $sql = "SELECT email FROM coaching where coaching_Name='Aayam Carrer Institute'";
           $result = mysqli_query($conn, $sql);
           $row = mysqli_fetch_assoc($result);
           echo $row['email']; ?>
         </p>
         <p class="rating">Rating :
           <?php
-          $sql = "SELECT rating FROM ratings where cid=1";
+          $sql = "SELECT rating FROM ratings where cid=5";
           $result = mysqli_query($conn, $sql);
           $row = mysqli_fetch_assoc($result);
           echo $row['rating']; ?>
         </p>
         <p class="courses">Courses :
           <?php
-          $sql = "SELECT coursename FROM courses where coachingid=1";
+          $sql = "SELECT coursename FROM courses where coachingid=5";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             $courseNames3[] = $row['coursename'];

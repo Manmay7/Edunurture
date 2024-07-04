@@ -22,16 +22,17 @@ require_once "config.php";
 </head>
 <style>
     th,
-        td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
+    th {
+        background-color: #f2f2f2;
+    }
 </style>
+
 <body>
     <!-- Navbar top -->
     <div class="navbar-top">
@@ -107,15 +108,52 @@ require_once "config.php";
                             </td>
                         </tr>
                         <tr>
-                            <td>Courses available</td>
+                            <?php
+                            $sql = "SELECT * FROM courses where coachingid=$_SESSION[id]";
+                            $result = mysqli_query($conn, $sql);
+                            ?>
+
+
+                            <td> Courses</td>
                             <td>:</td>
-                            <td>JEE/NEET</td>
+                            <td>
+                                <?php
+                                // Display mentor data in a table
+                                while ($row = mysqli_fetch_assoc($result)) {
+
+
+                                    echo $row['coursename'];
+
+
+                                    echo "/";
+                                }
+                                ?>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Center</td>
+                            <?php
+                            $sql = "SELECT * FROM center where coachingid=$_SESSION[id]";
+                            $result = mysqli_query($conn, $sql);
+                            ?>
+
+
+                            <td> Center</td>
                             <td>:</td>
-                            <td>Indore, Bhopal, Mumbai, Delhi</td>
+                            <td>
+                                <?php
+                                // Display mentor data in a table
+                                while ($row = mysqli_fetch_assoc($result)) {
+
+
+                                    echo $row['city'];
+
+
+                                    echo "/";
+                                }
+                                ?>
+                            </td>
                         </tr>
+
                     </tbody>
                 </table>
                 <div class="sidenav-url">
@@ -147,10 +185,10 @@ require_once "config.php";
                     // Display mentor data in a table
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>",  $row['coursename'] . "</td>";
-                        echo "<td>",  $row['field'] . "</td>";
-                        echo "<td>",  $row['duration'] . "</td>";
-                        echo "<td>",  $row['fees'] . "</td>";
+                        echo "<td>", $row['coursename'] . "</td>";
+                        echo "<td>", $row['field'] . "</td>";
+                        echo "<td>", $row['duration'] . "</td>";
+                        echo "<td>", $row['fees'] . "</td>";
                         // Add more table data cells for other columns as needed
                         echo "</tr>";
                     }
@@ -182,10 +220,10 @@ require_once "config.php";
                     // Display mentor data in a table
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>",  $row['centername'] . "</td>";
-                        echo "<td>",  $row['address'] . "</td>";
-                        echo "<td>",  $row['city'] . "</td>";
-                        echo "<td>",  $row['state'] . "</td>";
+                        echo "<td>", $row['centername'] . "</td>";
+                        echo "<td>", $row['address'] . "</td>";
+                        echo "<td>", $row['city'] . "</td>";
+                        echo "<td>", $row['state'] . "</td>";
                         // Add more table data cells for other columns as needed
                         echo "</tr>";
                     }
@@ -216,9 +254,9 @@ require_once "config.php";
                     // Display mentor data in a table
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>",  $row['username'] . "</td>";
-                        echo "<td>",  $row['contact_Number'] . "</td>";
-                        echo "<td>",  $row['education'] . "</td>";
+                        echo "<td>", $row['username'] . "</td>";
+                        echo "<td>", $row['contact_Number'] . "</td>";
+                        echo "<td>", $row['education'] . "</td>";
                         // Add more table data cells for other columns as needed
                         echo "</tr>";
                     }
@@ -230,7 +268,7 @@ require_once "config.php";
 
 
     </div>
-    
+
     <div class="main">
         <h2>Best Results</h2>
         <div class="card">
@@ -244,16 +282,16 @@ require_once "config.php";
                     <tr>
                         <th>Student Name</th>
                         <th>Rank</th>
-                        <th>Batch</th>
+                        <th>College</th>
                     </tr>
                     <?php
-                    
+
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>",  $row['studentname'] . "</td>";
-                        echo "<td>",  $row['rank'] . "</td>";
-                        echo "<td>",  $row['batch'] . "</td>";
-                        
+                        echo "<td>", $row['studentname'] . "</td>";
+                        echo "<td>", $row['rank'] . "</td>";
+                        echo "<td>", $row['batch'] . "</td>";
+
                         echo "</tr>";
                     }
                     ?>
@@ -264,50 +302,8 @@ require_once "config.php";
 
 
     </div>
-    
+
     <!-- End -->
 </body>
 
 </html>
-
-
-
-
-
-
-<!-- // Query to retrieve data from the "mentor" table
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Mentor List</title>
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Mentor List</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <!-- Add more table headers for other columns as needed -->
-        
